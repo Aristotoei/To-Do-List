@@ -14,6 +14,11 @@ function addTask(){
   }
   InputBox.value = "";
 }
+InputBox.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    addTask();
+  }
+})
 
 ListContainer.addEventListener("click", function(task) {
   if(task.target.tagName === "LI") {
